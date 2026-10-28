@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY playlist sorter</title>
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+</head>
+<body>
+   <div class="container py-4">
+
+    <h1 class="mb-1">MY playlist sorter</h1>
+    <p class="text-muted mb-4">Sort and label your music playing JavaScript array methods!</p>
+           
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <h3 class="card title">Song names</h3>
+            <button class="btn btn-primary mr-2" onclick="sortAZ()">Sort A to Z</button>
+            <button class="btn btn-primary" onclick="sortZA()">Sort Z to A</button>
+            <DIV id="nameResult" class="box p-3 mt-3 rounded"></DIV>
+        </div>
+    </div>
+   </div>
+   <script>
+    var songs =["Zoom", "Bounce", "Glow", "Rush", "Spark"];
+
+    document.getElementById("nameResult").innerHTML ="Songs: " + songs;
+
+    function sortAZ()   {songs.sort();
+   document.getElementById("nameResult").innerHTML = "A to Z: " + songs ;}
+    function sortZA()   {songs.reverse();
+   document.getElementById("nameResult").innerHTML = "Z to A: " + songs ;}
+   </script>
+</body>
+</html>
